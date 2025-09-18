@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 04</title>
+    <script>
+        function calcular() {
+            var kmInicial = parseFloat(document.getElementById('ini').value);
+            var kmFinal =  parseFloat(document.getElementById('fin').value);
+            var litros = parseFloat(document.getElementById('lit').value);
+            var preco = parseFloat(document.getElementById('pre').value);
+
+            distancia = kmFinal - kmInicial;
+            consumo = distancia / litros;
+            gasto = litros * preco;
+
+            document.getElementById('distancia').textContent = distancia.toFixed(2) + " km";
+            document.getElementById('consumo').textContent = consumo.toFixed(2) + " km/l";
+            document.getElementById('gasto').textContent = "R$ " + gasto.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Calculadora de Consumo de Combustível</h2>
+
+    <label for="kmInicial">Km inicial: </label>
+    <input type="number" id="ini" step="0.01" /><br><br>
+
+    <label for="kmFinal">Km final: </label>
+    <input type="number" id="fin" step="0.01" /><br><br>
+
+    <label for="litros">Litros gastos: </label>
+    <input type="number" id="lit" step="0.01" /><br><br>
+
+    <label for="preco">Preço do litro (R$): </label>
+    <input type="number" id="pre" step="0.01" /><br><br>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <hr>
+
+    <p>Distância percorrida: <span id="distancia">0 km</span></p>
+    <p>Consumo médio: <span id="consumo">0 km/l</span></p>
+    <p>Valor gasto: <span id="gasto">R$ 0,00</span></p>
+</body>
+</html>
