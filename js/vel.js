@@ -4,16 +4,15 @@ function calcularVelocidade() {
 
     let excesso = velMarcada - velPermitida;
     let multa = 0;
-    let mensagem = ""
 
     if (excesso <= 0) {
-        mensagem ('Você está dentro do limite da velocidade. Nenhuma multa aplicada.');
-    } else if (excesso <= 10){
-        multa = 50;
-        mensagem = "Você ultrapassou o limite em até 10 km/h.";
+        alert ('Multa de R$0,00. Você está dentro do limite da velocidade. Nenhuma multa aplicada.');
+    } else if (excesso <= 10){;
+        alert ("Multa de R$50,00. Você ultrapassou o limite em até 10 km/h.");
     } else if (excesso <= 30) {
-        multa = 100;
-        mensagem = "Você ultrapassou o limite entre 11" 
-    }
+       alert ("Multa de R$100,00. Você ultrapassou o limite entre 11 e 30km/h.");
+    } else {
+        alert ("Multa de R$200,00. Você ultrapassou mais de 31 km/h o limite.");
+}
 
 }
